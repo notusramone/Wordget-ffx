@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+
+<window id="main" title="My App" width="1200px" height="900px"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/javascript" src="chrome://wordget/content/sqlite100.js"/>
+<script type="application/javascript" src="chrome://wordget/content/main.js"/>
+ 
+ <hbox>
+<button label="Show Libraries" oncommand="showLibList();" id="btn_showlib" width="300px" height="20px" />
+<textbox id="c_lib" width="0px" height="20px" style="visibility: hidden;"></textbox>
+<button label="Show NUll-Phonetic Words" oncommand="showunphoed();" id="btn_showlib" width="300px" height="20px" />
+<button label="Update All" oncommand="updateAll();" id="btn_showlib" width="300px" height="20px" />
+</hbox>
+ 
+ <hbox>
+<vbox id="box_main"  flex="1" style="overflow:auto" width="400px" height="700px" />  
+ 
+<vbox id="box_wordlist"  flex="1" style="overflow:auto" width="300px" height="700px"/> 
+ 
+ </hbox>
+
+ <menupopup id="menu_ToolsPopup"> 
+     <menuitem label="Wordget Tool"
+                       insertafter="devToolsSeparator" 
+                       oncommand="showLibList();" />
+ </menupopup>    
+</window>
